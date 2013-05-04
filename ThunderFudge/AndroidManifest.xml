@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.thunderfudge"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <!-- Here we replace main activity by standing page activity by replacing the main activity class
+         name by pic activity class name  -->
+        <activity
+            android:name="com.example.thunderfudge.Splash"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--  Android screen Orientation is added to set the app in fixed portrait view -->
+        <!-- And another activity is created for main activity -->
+         <activity
+            android:name="com.example.thunderfudge.MainActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>
